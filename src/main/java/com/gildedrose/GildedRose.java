@@ -24,24 +24,15 @@ class GildedRose {
                 }
             } else if ( item.name.equals("Aged Brie") ) {
                 if ( item.quality < 50 ) {
-                    item.quality = item.quality + 1;
-                    if ( item.sellIn < 0 ) {
-                        item.quality = item.quality + 1;
-                    }
+                    item.quality = ( item.sellIn < 0 ) ? item.quality + 2 : item.quality + 1;
                 }       
             } else if ( item.name.equals("Conjured Mana Cake") ) {
                 if ( item.quality > 0 ) {
-                    item.quality = item.quality - 2;
-                    if ( item.sellIn < 0 ) {
-                        item.quality = item.quality - 2;
-                    }
+                    item.quality = ( item.sellIn < 0 ) ? item.quality - 4 :  item.quality - 2;
                 }       
             } else if ( !item.name.equals("Sulfuras, Hand of Ragnaros") ) {
                 if ( item.quality > 0 ) {
-                    item.quality = item.quality - 1;
-                    if ( item.sellIn < 0 ) {
-                        item.quality = item.quality - 1;
-                    }
+                    item.quality = ( item.sellIn < 0 ) ? item.quality - 2 : item.quality - 1;
                 } 
             } 
             
