@@ -129,7 +129,6 @@ class GildedRoseTest {
     
     
     @Test
-    @Disabled
     @DisplayName("Conjured items quality degrades 2 times faster than others")
     public void testConjured() {
         
